@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>Weather Forcast</title>
+</head>
+<header>
+    <div class="jumbotron jumbotron-fluid color">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold text-center head-of-page">Weather Dashboard</h1>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h4>Search for a city:</h4>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div class="past-search"></div>
+            </div>
+            <div class="col-md-8">
+                <div class="current-weather">
+                    <h4>City</h4>
+                    <br>
+                    <p>Temperature:</p>
+                    <div class="temp"></div>
+                    <br>
+                    <p>Humidity:</p>
+                    <div class="humidity"></div>
+                    <br>
+                    <p>Wind Speed:</p>
+                    <div class="wind-speed"></div>
+                    <br>
+                    <p>UV Index:</p>
+                    <div class="uv-index"></div>
+                    <br>
+                </div>
+                <div class="five-day-forcast">
+                    <h4>5-Day Forecast:</h4>
+                    <br>
+                    <div class="card text-white bg-primary mb-3 float-left" style="max-width: 8rem;">
+                        <div class="card-body">
+                          <h5 class="card-title card-temp">Date</h5>
+                          <img>
+                          <p class="card-text card-temp">Temp:</p>
+                          <p class="card-text card-humidity">Humidity:</p>
+                        </div>
+                      </div>
+                      <div class="card text-white bg-primary mb-3 float-left" style="max-width: 8rem;">
+                        <div class="card-body">
+                          <h5 class="card-title card-temp">Date</h5>
+                          <img>
+                          <p class="card-text card-temp">Temp:</p>
+                          <p class="card-text card-humidity">Humidity:</p>
+                        </div>
+                      </div>
+                      <div class="card text-white bg-primary mb-3 float-left" style="max-width: 8rem;">
+                        <div class="card-body">
+                          <h5 class="card-title card-temp">Date</h5>
+                          <img>
+                          <p class="card-text card-temp">Temp:</p>
+                          <p class="card-text card-humidity">Humidity:</p>
+                        </div>
+                      </div>
+                      <div class="card text-white bg-primary mb-3 float-left" style="max-width: 8rem;">
+                        <div class="card-body">
+                          <h5 class="card-title card-temp">Date</h5>
+                          <img>
+                          <p class="card-text card-temp">Temp:</p>
+                          <p class="card-text card-humidity">Humidity:</p>
+                        </div>
+                      </div>
+                      <div class="card text-white bg-primary mb-3 float-left" style="max-width: 8rem;">
+                        <div class="card-body">
+                          <h5 class="card-title card-temp">Date</h5>
+                          <img>
+                          <p class="card-text card-temp">Temp:</p>
+                          <p class="card-text card-humidity">Humidity:</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src=./script.jss> </script> <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

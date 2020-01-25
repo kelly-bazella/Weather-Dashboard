@@ -1,0 +1,13 @@
+.head-of-page{
+    color: white;
+}
+.color{
+    background-color: darkslategrey;
+}
+.current-weather{
+    border-width:10px;
+    border-color:black;
+}
+.float-left{
+    margin:10px;
+}
