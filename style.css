@@ -2,12 +2,12 @@
     color: white;
 }
 .color{
-    background-color: darkslategrey;
+    background-color:#424243;
 }
 .current-weather{
     border-width:10px;
     border-color:black;
 }
 .float-left{
-    margin:10px;
+    margin:5px;
 }
