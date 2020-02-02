@@ -3,7 +3,7 @@ var apiKey = "6c8bace821ea4c6237ba931d1ab4ccf9";
 var placesArr = [];
 
 // all functions
-
+init();
 //weather function
 function weatherApi(city) {
     var queryURL = " http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + city + "&APPID=" + apiKey;
@@ -66,7 +66,6 @@ function forecastDate(city) {
         var forecast = response.list.map(function (element) {
             return (element.dt_txt.split(" ")[0])
         });
-        console.log(forecast)
         $(".date1").text(forecast[2]);
         $(".date2").text(forecast[10]);
         $(".date3").text(forecast[19]);
@@ -103,7 +102,7 @@ function uvIndex(lat, lon) {
     })
 }
 
-function renderPastSearchList(city) {
+function renderPastSearchList() {
     $(".past-search").empty();
     for (var p = 0; p < placesArr.length; p++) {
         var placeDiv = $("<div>");
@@ -118,28 +117,42 @@ function renderPastSearchList(city) {
     }
 }
 
+function saveLocalStorage(){
+    localStorage.setItem("placesArr", JSON.stringify(placesArr));
+}
 
+function init(){
+    var storedCities = JSON.parse(localStorage.getItem("placesArr"));
+    if (storedCities !==null){
+        placesArr = storedCities;
+        renderPastSearchList();
+    }
+}
 
 //click events
 $(".submit-button").on("click", function (event) {
     event.preventDefault();
     var userInput = $(".data-input").val().trim();
+    if(userInput===""){
+        return;
+    }
     placesArr.push(userInput);
     $(".city-name").text(userInput);
     weatherApi(userInput);
     forecastApi(userInput);
     forecastDate(userInput);
-    renderPastSearchList(userInput);
-    saveLocalStorage(userInput);
+    renderPastSearchList();
+    saveLocalStorage();
 })
 
 
 $(document).on("click", ".past-search-list", function(){
     var userInput= $(this).text().trim();
-    console.log(userInput)
     $(".city-name").text(userInput);
     weatherApi(userInput);
     forecastApi(userInput);
     forecastDate(userInput);
     renderPastSearchList(userInput);
+    localStorage.getItem(JSON.parse("cities"))
 })
+
