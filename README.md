@@ -1,1 +1,2 @@
 # Weather-Dashboard
+This is a weather dashboard used to look up the weather by using the search field. Input a city and you will be presented with the current weather and the 5-day forecast. The uv index is shown with a color coded background depending on if it is mild, moderate, or extreme. There is also a past search history section so the user can see the places they looked up previously. 
